@@ -1,15 +1,15 @@
 import React from 'react'
-import img1 from './image/Screenshot from 2022-06-20 18-14-24 (1) (4).png'
-import img2 from './image/Screenshot from 2022-06-20 18-14-24 (1) (5).png'
+import img1 from './image/image1.png'
+import img2 from './image/logo.png'
 export default function Image() {
   return (
-    <div className='image'>
+    <div className='ImagePage'>
     <div className='logo2'>
-     <a href="//"><img  src={img1} alt="" /></a>
-     <a href="//"><img  src={img2} alt="" /></a>
+      <a href=""><img className='logoimg' src={img2} alt="" /></a>
     </div>
-    
+    <div className='image'>
+      <img className='mainimg' src={img1} alt="" />
   </div>
-   
+   </div>
   )
 }
