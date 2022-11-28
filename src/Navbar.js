@@ -1,8 +1,10 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import Image from "./Image";
 import img1 from "./image/logo.jpeg";
 export default function Navbar() {
   return (
+    <>
     <div className="navbar">
       <div className="logo">
         <img className="logo" src={img1} alt="" />
@@ -21,6 +23,9 @@ export default function Navbar() {
           <Outlet />
         </nav>
       </div>
+     
     </div>
+     {/* <Image/> */}
+     </>
   );
 }

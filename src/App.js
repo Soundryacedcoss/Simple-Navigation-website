@@ -1,23 +1,29 @@
-import './App.css';
-import Image from './Image';
-import Navbar from './Navbar';
-import Home from './Home'
-import Contactus from './Contactus';
-import {Routes,Route } from 'react-router-dom';
-import Link1 from './Link1';
-import Link2 from './Link2';
+import "./App.css";
+import Home from "./Components/Home";
+import Nav from "./Nav";
+import { Routes, Route } from "react-router-dom";
+import City from "./Components/City";
+import LINK1 from "./Components/LINK1";
+import LINK2 from "./Components/LINK2";
+import LINK3 from "./Components/LINK3";
+import Contact from "./Components/Contact";
+import { Facebook } from "./Facebook";
+import { Instagram } from "./Instagram";
+
 function App() {
   return (
-    <div className="App">
+    <div>
+      <Nav />
       <Routes>
-        <Route path='/' element={ <Navbar/>}>
-          <Route path='/Home' element={<Home/>}/>
-          <Route path='/Link1' element={<Link1/>}/>
-          <Route path='/Link2' element={<Link2/>}/>
-          <Route path='/Contactus' element={<Contactus/>}/>
-          </Route>
-      </Routes>   
-      <Image/>
+        <Route path="/" element={<Home />} />
+        <Route path="cities" element={<City />} />
+        <Route path="link1" element={<LINK1 />} />
+        <Route path="link2" element={<LINK2 />} />
+        <Route path="link3" element={<LINK3 />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="Facebook" element={<Facebook/>}/>
+        <Route path="Instagram" element={<Instagram/>}/>
+      </Routes>
     </div>
   );
 }
